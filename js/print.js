@@ -12,12 +12,13 @@ function PortfolioCreation (options) {
 
 PortfolioCreation.prototype.toHtml = function () {
   //create new portfolio articele
-  var $newPortfolio = $('article.newPortfolioItem').clone();
+  var $newPortfolio = $('.newPortfolioItem').clone();
   //append to the newPortfolio
   $newPortfolio.find('h2').text(this.name);
   $newPortfolio.find('time').attr("pubdate", this.datePublished);
-  $newPortfolio.find('.portfolioLink').attr("html", this.githubUrl);
+  $newPortfolio.find('a#portfolioLink').attr("html", this.githubUrl);
   $newPortfolio.find('.projectDescription').html(this.description);
+  // $newPortfolio.removeClass('projectDescription');
   return $newPortfolio;
 }
 

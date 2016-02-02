@@ -2,9 +2,10 @@
   display: flex;
   flex-direction: row;
   justify-content: center;
-  background-color: #B2370E;
+  background-color: #151E5F;
   padding: 1%;
   border-radius: 25px;
+  color: white;
 }
 img#katsFace {
   width: 20%;
@@ -17,6 +18,20 @@ img#katsFace {
   margin: 2%;
 }
 
-article {
-  background-color: #151E5F;
+.newPortfolioItem {
+  background-color: #B2370E;
+  border-radius: 25px;
+  padding: 1%;
+  margin: 1%;
+  width: 90%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
