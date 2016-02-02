@@ -1,0 +1,18 @@
+.mainHeader {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  background-color: #B2370E;
+  padding: 1%;
+  border-radius: 25px;
+}
+img#katsFace {
+  width: 20%;
+  height: 40%;
+  border-radius: 15px;
+  box-shadow: 0px 0px 10px black;
+  margin: 2%;
+}
+.personalInfo {
+  margin: 2%;
+}
