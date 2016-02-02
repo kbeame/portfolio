@@ -15,10 +15,17 @@ PortfolioCreation.prototype.toHtml = function () {
   var $newPortfolio = $('article.newPortfolioItem').clone();
   //append to the newPortfolio
   $newPortfolio.find('h2').text(this.name);
-  $newPortfolio.find('pubdate').atr(this.name);
-
-
-
-
-
+  $newPortfolio.find('time').attr("pubdate", this.datePublished);
+  $newPortfolio.find('.portfolioLink').attr("html", this.githubUrl);
+  $newPortfolio.find('.projectDescription').html(this.description);
+  return $newPortfolio;
 }
+
+//use the portfolioArray to construct the portfolio items needed
+portfolioArray.forEach(function (element) {
+  portfolio.push(new PortfolioCreation(element));
+});
+//append the portfolio array to the article class name newPortfolioItem
+portfolio.forEach(function (element) {
+  $('.newPortfolioItem').append(element.toHtml());
+});
