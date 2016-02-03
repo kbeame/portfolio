@@ -20,14 +20,14 @@ PortfolioCreation.prototype.toHtml = function () {
   }
   //append to the newPortfolio
   $newPortfolio.find('header h2').html(this.name);
-  $newPortfolio.find('time').html(parseInt((new Date() - new Date(this.datePublished))/60/60/24/1000) + ' days ago')
+  $newPortfolio.find('time').html(parseInt((new Date() - new Date(this.datePublished))/60/60/24/1000) + ' days ago');
   // $newPortfolio.find('time').html(parseInt((new Date() - new Date(this.datePublished))));
-  $newPortfolio.find('a#portfolio-link').attr("href", this.githubUrl);
+  $newPortfolio.find('a#portfolio-link').attr('href', this.githubUrl);
   $newPortfolio.find('.project-description').html(this.description);
   // $newPortfolio.append('<hr>');
   return $newPortfolio;
   $('article.draft').hide();
-}
+};
 
 
 
