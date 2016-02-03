@@ -40,5 +40,5 @@ portfolioArray.forEach(function (element) {
 });
 //append the portfolio array to the article class name newPortfolioItem
 portfolio.forEach(function (element) {
-  $('#individualPrint').append(element.toHtml());
+  $('.individualPrint').append(element.toHtml());
 });
