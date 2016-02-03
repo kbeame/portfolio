@@ -18,23 +18,25 @@ img#katsFace {
   margin: 2%;
 }
 
-#individualPrint {
+#individualPrint article {
   background-color: #B2370E;
   border-radius: 25px;
   padding: 1%;
   margin: 1%;
   width: 90%;
   /*display: flex;
-  flex-direction: column;
-  justify-content: center;
+  flex-direction: row;
+  justify-content: flex-start;
   align-items: center;*/
 }
-/*body {
+
+section {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: center;*/
-/*}*/
+  align-items: center;
+  align-content: center;
+}
 .template {
   display: none;
 }
