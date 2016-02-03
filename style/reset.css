@@ -42,7 +42,7 @@ section {
 }
 nav {
   width: 100%;
-  background-color: yellow;
+  background-color: #FF9D0F;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -69,3 +69,13 @@ li {
   padding: 1%;
   margin: 1%;
 }
+/** {
+  background-color: #5F4E15;
+}*/
+/*
+#1527AB
+#3745AB
+#151E5F
+#AB8504
+#5F4E15
+#B2370E*/
