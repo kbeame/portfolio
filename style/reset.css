@@ -1,0 +1,42 @@
+.mainHeader {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  background-color: #151E5F;
+  padding: 1%;
+  border-radius: 25px;
+  color: white;
+}
+img#katsFace {
+  width: 20%;
+  height: 40%;
+  border-radius: 15px;
+  box-shadow: 0px 0px 10px black;
+  margin: 2%;
+}
+.personalInfo {
+  margin: 2%;
+}
+
+#individualPrint article {
+  background-color: #B2370E;
+  border-radius: 25px;
+  padding: 1%;
+  margin: 1%;
+  width: 90%;
+  /*display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;*/
+}
+
+section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+}
+.template {
+  display: none;
+}
