@@ -18,20 +18,23 @@ img#katsFace {
   margin: 2%;
 }
 
-.newPortfolioItem {
+#individualPrint {
   background-color: #B2370E;
   border-radius: 25px;
   padding: 1%;
   margin: 1%;
   width: 90%;
-  display: flex;
+  /*display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: center;
+  align-items: center;*/
 }
-body {
+/*body {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: center;
+  align-items: center;*/
+/*}*/
+.template {
+  display: none;
 }

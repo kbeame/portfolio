@@ -12,21 +12,33 @@ function PortfolioCreation (options) {
 
 PortfolioCreation.prototype.toHtml = function () {
   //create new portfolio articele
-  var $newPortfolio = $('.newPortfolioItem').clone();
+  var $newPortfolio = $('article.template').clone();
+  $newPortfolio.removeClass('template');
+
+  if (!this.datePublished) {
+    $newPortfolio.addClass('draft');
+  }
   //append to the newPortfolio
-  $newPortfolio.find('h2').text(this.name);
-  $newPortfolio.find('time').attr("pubdate", this.datePublished);
-  $newPortfolio.find('a#portfolioLink').attr("html", this.githubUrl);
-  $newPortfolio.find('.projectDescription').html(this.description);
-  // $newPortfolio.removeClass('projectDescription');
+  $newPortfolio.find('header h2:first').html(this.name);
+  $newPortfolio.find('time[pubdate]').attr('datetime', this.datePublished);
+  $newPortfolio.find('time').html((new Date() - new Date(this.datePublished))/60/60/24/1000)
+  $newPortfolio.find('a#portfolio-link').attr("href", this.githubUrl);
+  $newPortfolio.find('.project-description').html(this.description);
+  $newPortfolio.append('<hr>');
   return $newPortfolio;
+  $('article.draft').hide();
 }
 
+
+
+portfolioArray.sort(function(a,b) {
+  return (new Date(b.datePublished)) - (new Date(a.datePublished));
+});
 //use the portfolioArray to construct the portfolio items needed
 portfolioArray.forEach(function (element) {
   portfolio.push(new PortfolioCreation(element));
 });
 //append the portfolio array to the article class name newPortfolioItem
 portfolio.forEach(function (element) {
-  $('.newPortfolioItem').append(element.toHtml());
+  $('#individualPrint').append(element.toHtml());
 });
