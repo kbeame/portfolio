@@ -30,7 +30,10 @@ nav {
 nav ul {
   list-style-type: none;
 }
+a {
+text-decoration: none;
 
+}
 li {
   list-style-type: none;
   background-color: inherit;

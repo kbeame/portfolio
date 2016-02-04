@@ -1,0 +1,16 @@
+.icon-history {
+  font-size: 2em;
+  background: none;
+  border:0;
+  outline: none;
+  top:0;
+  right:0;
+  position: absolute;
+  color:white;
+}
+nav:hover ul {
+  display: block;
+}
+nav ul {
+  display: none;
+}
