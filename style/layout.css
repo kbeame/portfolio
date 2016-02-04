@@ -1,0 +1,39 @@
+.mainHeader {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  padding: 1%;
+}
+
+section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+}
+
+nav {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-content: center;
+  width: 100%;
+  padding: 0%;
+  margin: 1%;
+}
+
+nav ul {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+nav ul li {
+  margin-left: 3%;
+  margin-right: 3%
+}
+li {
+  padding: 1%;
+  margin: 1%;
+}
