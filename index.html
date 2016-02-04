@@ -3,22 +3,29 @@
   <head>
     <title>Katherine Beame</title>
     <link rel="stylesheet" href="style/reset.css">
+    <link rel="stylesheet" href="style/icon.css">
+    <link rel="stylesheet" href="style/theme.css">
   </head>
   <body>
     <header class="mainHeader">
       <img id="katsFace" src="img/kat_face.jpg" alt="Headshot" />
       <section class="personalInfo">
         <h1>Katherine Beame</h1>
-        <ul>
-          <li>Email: katherine.beame@gmail.com</li>
-          <li><a href="https://github.com/kbeame">GitHub</a></li>
-          <li><a href="https://www.linkedin.com/in/kat-beame-b7743052">Linkedin</a></li>
-          <li><a href="https://twitter.com/KatBeame">Twitter</a></li>
-        </ul>
       </section>
     </header>
+    <section class="header">
+    <nav>
+      <ul>
+        <li class="tab" data-content="to-portfolio"><a class="icon-home3" href="#"> Home</a></li>
+        <li class="tab" data-content="about"><a class="icon-user" href="#"> About</a></li>
+        <li><a class="icon-github" href="https://github.com/kbeame">GitHub</a></li>
+        <li><a class="icon-linkedin" href="https://www.linkedin.com/in/kat-beame-b7743052">Linkedin</a></li>
+        <li><a class="icon-twitter" href="https://twitter.com/KatBeame">Twitter</a></li>
+      </ul>
+    </nav>
+</section>
     <main>
-    <section id="individualPrint">
+    <section id="to-portfolio" class="close-tab individualPrint">
       <article class="template">
         <header>
           <h2>Title</h2>
@@ -30,11 +37,23 @@
         <article class="project-description">
           <!-- this will have the content of each project -->
         </article>
+        <a class="read-on" href="#">Read on</a>
       </article>
+    </section>
+    <section id="about" class="close-tab">
+      <h2>Kat's History</h2>
+      <div><a class="icon-mail2">katherine.beame@gmail.com</a></div>
+       <p>
+        Cultivated relationships with local vendors for participation in a nationwide study of food borne pathogens in food.
+       Culturally confirmed samples and prepared positive isolates for long-term storage.
+       Prepared media and reagents for use in aseptic sample processing.
+       Conducted environmental monitoring and disposal of biohazardous materials (autoclave).
+     </p>
     </section>
   </main>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
     <script type="text/javascript" src="js/portfolioArray.js"></script>
     <script type="text/javascript" src="js/print.js"></script>
+    <script type="text/javascript" src="js/navbar.js"></script>
   </body>
 </html>

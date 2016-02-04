@@ -16,10 +16,11 @@ img#katsFace {
 }
 .personalInfo {
   margin: 2%;
+  background-color: #151E5F;
 }
 
-#individualPrint article {
-  background-color: #B2370E;
+.individualPrint article {
+  background-color: #223098;
   border-radius: 25px;
   padding: 1%;
   margin: 1%;
@@ -39,4 +40,34 @@ section {
 }
 .template {
   display: none;
+}
+nav {
+  width: 100%;
+  background-color: #FF9D0F;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-content: center;
+  border-radius: 25px;
+  padding: 0%;
+  margin: 1%;
+
+}
+nav ul {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  list-style-type: none;
+}
+
+nav ul li {
+  margin-left: 3%;
+  margin-right: 3%
+}
+li {
+  list-style-type: none;
+  padding: 1%;
+  margin: 1%;
+  background-color: inherit;
 }
