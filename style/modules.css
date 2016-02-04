@@ -1,0 +1,47 @@
+.icon-history {
+  font-size: 2em;
+  background: none;
+  border:0;
+  outline: none;
+  top:0;
+  right:0;
+  position: absolute;
+  color:white;
+}
+nav:hover ul {
+  display: block;
+}
+nav ul {
+  display: none;
+}
+
+@media only screen and (min-width: 640px) {
+  .icon-history {
+    display: none;
+  }
+  nav {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    align-items: center;
+  }
+
+  nav ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    /*align-content: center;
+    align-items: center;*/
+  }
+  nav ul li {
+    display: inline-block;
+  }
+  nav:hover ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    /*align-items: center;
+    align-content: center;*/
+  }
+}
