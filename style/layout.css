@@ -40,17 +40,8 @@ nav ul li {
 li {
   padding: 1%;
   margin: 1%;
-
-
 }
 
-/*media query things*/
-/*@@media
-nav ul {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-} {
-
-}*/
+nav {
+  display: relative;
+}

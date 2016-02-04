@@ -14,3 +14,33 @@ nav:hover ul {
 nav ul {
   display: none;
 }
+
+@media only screen and (min-width: 640px) {
+  .icon-history {
+    display: none;
+  }
+  nav {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+  }
+
+  nav ul{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+  }
+  nav li {
+    display: inline;
+  }
+  nav:hover ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+  }
+}
