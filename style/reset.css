@@ -16,10 +16,11 @@ img#katsFace {
 }
 .personalInfo {
   margin: 2%;
+  background-color: #151E5F;
 }
 
 .individualPrint article {
-  background-color: #B2370E;
+  background-color: #223098;
   border-radius: 25px;
   padding: 1%;
   margin: 1%;
@@ -68,14 +69,5 @@ li {
   list-style-type: none;
   padding: 1%;
   margin: 1%;
+  background-color: inherit;
 }
-/** {
-  background-color: #5F4E15;
-}*/
-/*
-#1527AB
-#3745AB
-#151E5F
-#AB8504
-#5F4E15
-#B2370E*/
