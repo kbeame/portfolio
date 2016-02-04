@@ -24,16 +24,33 @@ nav {
 }
 
 nav ul {
+  /*display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;*/
+}
+nav ul li {
+  margin-left: 3%;
+  margin-right: 3%;
+  border-bottom: 1px solid #151E5F;
+}
+
+  /*#151E5F*/
+
+li {
+  padding: 1%;
+  margin: 1%;
+
+
+}
+
+/*media query things*/
+/*@@media
+nav ul {
   display: flex;
   flex-direction: row;
   justify-content: center;
   align-items: center;
-}
-nav ul li {
-  margin-left: 3%;
-  margin-right: 3%
-}
-li {
-  padding: 1%;
-  margin: 1%;
-}
+} {
+
+}*/
