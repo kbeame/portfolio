@@ -23,12 +23,6 @@ nav {
   margin: 1%;
 }
 
-nav ul {
-  /*display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;*/
-}
 nav ul li {
   margin-left: 3%;
   margin-right: 3%;
@@ -44,4 +38,8 @@ li {
 
 nav {
   display: relative;
+}
+* body {
+  margin-left: 2%;
+  margin-right: 2%;
 }

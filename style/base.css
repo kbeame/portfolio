@@ -1,3 +1,15 @@
+body {
+  font-family: 'Bitter', serif;
+}
+h1 {
+  font-size: 3.2rem;
+}
+h2 {
+  font-size: 2.0rem;
+}
+h3 {
+  font-size: 1.6rem;
+}
 img#katsFace {
   width: 20%;
   height: 40%;
@@ -5,6 +17,7 @@ img#katsFace {
   box-shadow: 0px 0px 10px black;
   margin: 2%;
 }
+
 .personalInfo {
   margin: 2%;
   background-color: #151E5F;
@@ -32,7 +45,10 @@ nav ul {
 }
 a {
 text-decoration: none;
-
+font-size: 1rem;
+}
+address {
+  font-size: 1.2rem;
 }
 li {
   list-style-type: none;
