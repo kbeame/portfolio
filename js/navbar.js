@@ -8,8 +8,7 @@ handleNav = function() {
     $('section#' + navVal).fadeIn();
   });
   $('.close-tab').hide();
-  // $('header').hide();
-  // $('nav').hide()
+  //I don't want the 'portfolio' info to show up first. I only want it if I click on portfolio.
   // $('nav .tab:first').click();
 };
 
