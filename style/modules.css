@@ -1,4 +1,4 @@
-.icon-history {
+.icon-menu3 {
   font-size: 2em;
   background: none;
   border:0;
@@ -16,7 +16,7 @@ nav ul {
 }
 
 @media only screen and (min-width: 640px) {
-  .icon-history {
+  .icon-menu3 {
     display: none;
   }
   nav {
