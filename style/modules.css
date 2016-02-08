@@ -8,9 +8,13 @@
   position: absolute;
   color:white;
 }
+nav {
+  display: relative;
+}
 nav:hover ul {
   display: block;
 }
+
 body {
   background: green;
 }
@@ -33,6 +37,7 @@ nav ul {
 .circle:hover {
   background-color: purple;
 }
+
 @media only screen and (min-width: 640px) {
   .circle {
     display: inline-block;
