@@ -7,8 +7,10 @@ handleNav = function() {
     $('.close-tab').hide();
     $('section#' + navVal).fadeIn();
   });
-
-  $('nav .tab:first').click();
+  $('.close-tab').hide();
+  // $('header').hide();
+  // $('nav').hide()
+  // $('nav .tab:first').click();
 };
 
 handleNav();
