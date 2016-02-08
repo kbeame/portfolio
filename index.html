@@ -3,29 +3,14 @@
   <head>
     <meta name="viewport" content="width=device-width", initial-scale="1">
     <title>Katherine Beame</title>
-    <link href='https://fonts.googleapis.com/css?family=Bitter' rel='stylesheet' type='text/css'>
-    <link rel="stylesheet" href="style/base.css">
+    <link rel="stylesheet" href="style/reset.css">
     <link rel="stylesheet" href="style/icon.css">
     <link rel="stylesheet" href="style/theme.css">
     <link rel="stylesheet" href="style/layout.css">
     <link rel="stylesheet" href="style/modules.css">
-<!-- Handle bar template -->
-<script id="a-template" type="text/x-handlebars-template">
-
-    <article class="clearfix" data-category="{{category}}">
-      <header>
-        <h2>{{name}}<h2>
-        <div>
-          {{publishedDatePrint}}
-          <address><a id="portfolio-link" href="{{githubUrl}}">Link to githubUrl</a></address>
-        </div>
-      </header>
-      {{{description}}}
-  </script>
-
-    </head>
-
+  </head>
   <body>
+    <section class="relative">
     <header class="mainHeader">
       <img id="katsFace" src="img/kat_face.jpg" alt="Headshot" />
       <section class="personalInfo">
@@ -42,8 +27,23 @@
         <li><a class="icon-twitter" href="https://twitter.com/KatBeame">Twitter</a></li>
       </ul>
     </nav>
+    <section>
     <main>
-      <section id="to-portfolio" class="close-tab individualPrint"></section>
+    <section id="to-portfolio" class="close-tab individualPrint">
+      <article class="template">
+        <header>
+          <h2>Title</h2>
+          <div>
+          published: <time pubdate="2000-01-01">pub date here</time>
+          </div>
+          <address><a id="portfolio-link" href=" ">Link to githubUrl</a></address>
+        </header>
+        <article class="project-description">
+          <!-- this will have the content of each project -->
+        </article>
+        <a class="read-on" href="#">Read on</a>
+      </article>
+    </section>
     <section id="about" class="close-tab">
       <h2>Kat's History</h2>
       <div><a class="icon-mail2">katherine.beame@gmail.com</a></div>
@@ -54,10 +54,8 @@
        Conducted environmental monitoring and disposal of biohazardous materials (autoclave).
      </p>
     </section>
-    </main>
-
+  </main>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.5/handlebars.min.js"></script>
     <script type="text/javascript" src="js/portfolioArray.js"></script>
     <script type="text/javascript" src="js/print.js"></script>
     <script type="text/javascript" src="js/navbar.js"></script>

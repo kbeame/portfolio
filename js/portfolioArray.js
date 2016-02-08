@@ -20,4 +20,6 @@ var portfolioArray = [
     description: '<p>A sample website for the fitituous coffee company Campfire Coffee</p>',
     category: 'coffee'
   }
+
+
 ];
