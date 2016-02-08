@@ -5,42 +5,10 @@
   height: 10%;
 }
 
-/*section {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  align-content: center;
-  opacity: 1;
-}*/
-
-/*nav {*/
-  /*display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-content: center;
-  width: 100%;
-  padding: 0%;
-  margin: 1%;*/
-/*}*/
-
-/*nav ul li {
-
-  margin-left: 3%;
-  margin-right: 3%;*/
-  /*border-bottom: 1px solid #151E5F;*/
-}
-
   /*#151E5F*/
 
 li {
-  /*display: block;*/
   padding: 1%;
   margin: 3%;
-  opacity: 1;
-}
-
-nav {
-  display: relative;
   opacity: 1;
 }

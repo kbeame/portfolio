@@ -1,6 +1,3 @@
-//push up to this array
-var portfolio = [];
-
 //constructor function for the portfolio creation
 
 function PortfolioCreation (options) {
@@ -9,6 +6,7 @@ function PortfolioCreation (options) {
   this.description = options.description;
   this.datePublished = options.datePublished;
 }
+var portfolio = [];
 
 PortfolioCreation.prototype.toHtml = function () {
   var template = Handlebars.compile($('#a-template').text());

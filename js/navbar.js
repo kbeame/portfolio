@@ -12,10 +12,6 @@ handleNav = function() {
   // $('nav .tab:first').click();
 };
 
-handleNav();
-
-//allow readmore function to display more than 2 paragraphs
-
 readMorePortfolio = function() {
   $('.project-description *:nth-of-type(n+2)').hide();
 
@@ -25,4 +21,8 @@ readMorePortfolio = function() {
     $(this).hide();
   });
 };
-readMorePortfolio();
+
+$(document).ready(function() {
+  handleNav();
+  readMorePortfolio();
+});

@@ -3,8 +3,7 @@
   background: none;
   border:0;
   outline: none;
-  top:0;
-  right:0;
+  right: 20px;
   position: absolute;
   color:white;
 }
@@ -13,6 +12,7 @@ nav {
 }
 nav:hover ul {
   display: block;
+  clear: both;
 }
 
 body {
@@ -40,43 +40,33 @@ nav ul {
 
 @media only screen and (min-width: 640px) {
   .circle {
-    display: inline-block;
+    display: inherit;
     color: inherit;
     background-color: inherit;
   }
   .circle:hover {
-    display: block;
-    color: inherit;
-    background-color: inherit;
+    display: inherit;
+    color: white;
+    background-color: purple;
   }
   .icon-menu3 {
     display: none;
   }
-  nav {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    align-items: center;
+
+  nav ul li {
+    display: inline;
+    border-bottom: none;
+    margin: 1%;
   }
 
   nav ul {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    align-content: center;
-    align-items: center;
+    display: block;
   }
-  nav ul li {
-    display: inline-block;
-  }
-  nav:hover ul {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    align-content: center;
-  }
+
+  nav {
+      padding: .2em .2em .2em 2em;
+    }
+
   body {
     display: absolute;
     background-size: cover;
