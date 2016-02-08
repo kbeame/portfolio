@@ -1,6 +1,8 @@
+// It is important to keep functions as methods within objects to keep them organized.
+var portfolioView = {};
 
 //nav tab feature
-handleNav = function() {
+portfolioView.handleNav = function() {
   $('nav').on('click', '.tab', function() {
     var navVal = $(this).data('content');
     console.log(navVal);
@@ -12,7 +14,7 @@ handleNav = function() {
   // $('nav .tab:first').click();
 };
 
-readMorePortfolio = function() {
+portfolioView.readMorePortfolio = function() {
   $('.project-description *:nth-of-type(n+2)').hide();
 
   $('#to-portfolio').on('click', 'a.read-on', function(event) {
@@ -23,6 +25,6 @@ readMorePortfolio = function() {
 };
 
 $(document).ready(function() {
-  handleNav();
-  readMorePortfolio();
+  portfolioView.handleNav();
+  portfolioView.readMorePortfolio();
 });
