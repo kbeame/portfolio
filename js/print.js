@@ -17,7 +17,7 @@ PortfolioCreation.prototype.toHtml = function () {
 
   return template(this);
 };
-PortfolioCreation.Load = function(rawData) {
+PortfolioCreation.loadPortfolios = function(rawData) {
   rawData.sort(function(a,b) {
     return (new Date(b.datePublished)) - (new Date(a.datePublished));
   });
@@ -26,4 +26,29 @@ PortfolioCreation.Load = function(rawData) {
     PortfolioCreation.all.push(new PortfolioCreation(element));
   });
 };
-//use the portfolioArray to construct the portfolio items needed
+
+PortfolioCreation.retrieveAll = function () {
+  if (localStorage.rawData) {
+    $.ajax ({
+      type: 'HEAD',
+      url: 'data/portfolioIpsum.json',
+      success: function (data, message, xhr) {
+        var eTag = xhr.getResponseHeader('eTag');
+        if ((!localStorage.eTag) || (eTag !== localStorage.eTag)) {
+          localStorage.eTag = eTag;
+        } else {
+          PortfolioCreation.loadPortfolios(JSON.parse(localStorage.rawData));
+        }
+      }
+    });
+    PortfolioCreation.loadPortfolios(JSON.parse(localStorage.rawData));
+    portfolioView.printToIndex();
+  } else {
+    $.getJSON('data/portfolioIpsum.json', function(data) {
+      var stringData = JSON.stringify(data);
+      localStorage.setItem('rawData', stringData);
+    });
+    PortfolioCreation.loadPortfolios(JSON.parse(localStorage.rawData));
+    portfolioView.printToIndex();
+  };
+};

@@ -25,7 +25,7 @@ portfolioView.readMorePortfolio = function() {
 };
 
 portfolioView.printToIndex = function() {
-  Portfolio.all.forEach(function (element) {
+  PortfolioCreation.all.forEach(function (element) {
     $('.individualPrint').append(element.toHtml());
   });
 };
