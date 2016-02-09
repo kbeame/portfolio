@@ -6,7 +6,8 @@ function PortfolioCreation (options) {
   this.description = options.description;
   this.datePublished = options.datePublished;
 }
-var portfolio = [];
+//made the array global (its better form to have fewer global items)
+PortfolioCreation.all = [];
 
 PortfolioCreation.prototype.toHtml = function () {
   var template = Handlebars.compile($('#a-template').text());
@@ -16,15 +17,13 @@ PortfolioCreation.prototype.toHtml = function () {
 
   return template(this);
 };
+PortfolioCreation.Load = function(rawData) {
+  rawData.sort(function(a,b) {
+    return (new Date(b.datePublished)) - (new Date(a.datePublished));
+  });
 
-portfolioArray.sort(function(a,b) {
-  return (new Date(b.datePublished)) - (new Date(a.datePublished));
-});
+  rawData.forEach(function (element) {
+    PortfolioCreation.all.push(new PortfolioCreation(element));
+  });
+};
 //use the portfolioArray to construct the portfolio items needed
-portfolioArray.forEach(function (element) {
-  portfolio.push(new PortfolioCreation(element));
-});
-//append the portfolio array to the article class name newPortfolioItem
-portfolio.forEach(function (element) {
-  $('.individualPrint').append(element.toHtml());
-});

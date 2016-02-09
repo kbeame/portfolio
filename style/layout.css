@@ -12,3 +12,8 @@ li {
   margin: 3%;
   opacity: 1;
 }
+
+.clearfix::after {
+  display: table;
+  clear: both;
+}

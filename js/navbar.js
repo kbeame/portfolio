@@ -24,6 +24,14 @@ portfolioView.readMorePortfolio = function() {
   });
 };
 
+portfolioView.printToIndex = function() {
+  Portfolio.all.forEach(function (element) {
+    $('.individualPrint').append(element.toHtml());
+  });
+};
+
+
+
 $(document).ready(function() {
   portfolioView.handleNav();
   portfolioView.readMorePortfolio();
