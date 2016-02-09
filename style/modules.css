@@ -8,7 +8,7 @@
   color:black;
 }
 nav {
-  position: relative;
+  display: relative;
 }
 nav:hover ul {
   display: block;
@@ -21,22 +21,36 @@ body {
 nav ul {
   display: none;
 }
-.mainHeader {
+/*.mainHeader {
   position: fixed;
   width: 100%;
-  /*top: 0px;*/
-}
+  top: 0px;
+}*/
 .circle {
   margin-top: 3%;
-  max-width: 20%;
-  min-width: 18%;
+  width: 100px;
   border-radius: 50%;
-  color: green;
-  background-color: white;
+  color: black;
+  font-weight: bolder;
   padding: 3%;
   display: block;
   text-align: center;
+  text-shadow: 1px 0px white;
   font-size: 1em;
+  height: 100px;
+  box-shadow: 5px 5px 10px 0px brown;
+}
+#portfolio {
+background-image: url("http://www.cambridgeleather.com/wp-content/themes/cacbc/timthumb.php?src=/wp-content/gallery/new-thumbs/junior-portfolio-thumb.jpg&h=120&w=120&zc=1&q=80");
+}
+#resume {
+background-image: url("http://breweddaily.com/wp-content/uploads/2013/10/DSC1730-120x120.jpg");
+}
+#linked {
+background-image: url("http://www.blog-nouvelles-technologies.fr/wp-content/uploads/2011/01/linkedin-maps-1.jpg");
+}
+#bird {
+  background-image: url("http://www.quertime.com/wp-content/uploads/2011/09/best_websites_to_download_free_twitter_backgrounds_and_themes-120x120.jpg");
 }
 
 .circle:hover {
