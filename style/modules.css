@@ -7,6 +7,21 @@
   position: absolute;
   color:black;
 }
+.personalInfo {
+  margin: 2%;
+  background-color: #151E5F;
+}
+.individualPrint article {
+  background-color: #223098;
+  border-radius: 25px;
+  padding: 1%;
+  margin: 1%;
+  width: 100%;
+}
+
+.template {
+  display: none;
+}
 nav {
   display: relative;
 }
@@ -14,18 +29,19 @@ nav:hover ul {
   display: block;
   clear: both;
 }
-
+img#katsFace {
+  width: 20%;
+  height: 40%;
+  border-radius: 15px;
+  box-shadow: 0px 0px 10px black;
+  margin: 2%;
+}
 body {
   background: rgba(248, 231, 203, 1);
 }
 nav ul {
   display: none;
 }
-/*.mainHeader {
-  position: fixed;
-  width: 100%;
-  top: 0px;
-}*/
 .circle {
   margin-top: 3%;
   width: 100px;

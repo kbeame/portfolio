@@ -16,46 +16,25 @@ h4 {
 span {
   font-size: 1.0rem;
 }
-img#katsFace {
-  width: 20%;
-  height: 40%;
-  border-radius: 15px;
-  box-shadow: 0px 0px 10px black;
-  margin: 2%;
-}
 
-.personalInfo {
-  margin: 2%;
-  background-color: #151E5F;
-}
-
-.individualPrint article {
-  background-color: #223098;
-  border-radius: 25px;
-  padding: 1%;
-  margin: 1%;
-  width: 100%;
-}
-
-.template {
-  display: none;
-}
 nav {
   background-color: #FF9D0F;
   border-radius: 25px;
 }
 
-
 nav ul {
   list-style-type: none;
 }
+
 a {
 text-decoration: none;
 font-size: 1rem;
 }
+
 address {
   font-size: 1.2rem;
 }
+
 li {
   list-style-type: none;
   background-color: inherit;
