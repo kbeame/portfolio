@@ -2,13 +2,16 @@ body {
   font-family: 'Bitter', serif;
 }
 h1 {
-  font-size: 3.2rem;
+  font-size: 3.5rem;
 }
 h2 {
   font-size: 2.0rem;
 }
 h3 {
   font-size: 1.6rem;
+}
+h4 {
+  font-size: 0.7rem;
 }
 img#katsFace {
   width: 20%;

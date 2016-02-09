@@ -5,10 +5,10 @@
   outline: none;
   right: 20px;
   position: absolute;
-  color:white;
+  color:black;
 }
 nav {
-  display: relative;
+  position: relative;
 }
 nav:hover ul {
   display: block;
@@ -16,10 +16,15 @@ nav:hover ul {
 }
 
 body {
-  background: green;
+  background: rgba(248, 231, 203, 1);
 }
 nav ul {
   display: none;
+}
+.mainHeader {
+  position: fixed;
+  width: 100%;
+  /*top: 0px;*/
 }
 .circle {
   margin-top: 3%;
