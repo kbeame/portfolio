@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="style/theme.css">
     <link rel="stylesheet" href="style/layout.css">
     <link rel="stylesheet" href="style/modules.css">
+
 <!-- Handle bar template -->
 <script id="a-template" type="text/x-handlebars-template">
 
@@ -16,11 +17,14 @@
       <header>
         <h2>{{name}}<h2>
         <div>
-          {{publishedDatePrint}}
+            <span>{{publishedDatePrint}}</span>
           <address><a id="portfolio-link" href="{{githubUrl}}">Link to githubUrl</a></address>
         </div>
       </header>
+      <section class=project-description>
       {{{description}}}
+      <a href="#" class="read-on">read-on...<a>
+    </section>
   </script>
 
     </head>
@@ -28,17 +32,16 @@
   <body>
     <header class="mainHeader">
       <section class="personalInfo">
-        <h1>Katherine Beame: Web Developer</h1>
+        <h4>Katherine Beame: Web Developer</h4>
       </section>
     </header>
     <nav>
       <button class="icon-menu3"></button>
       <ul>
-        <li class="tab" data-content="to-portfolio"><a class="icon-folder-open circle" href="#">Portfolio</a></li>
-        <li class="tab" data-content="about"><a class="icon-profile circle" href="#">About</a></li>
-        <li><a class="icon-github circle" href="https://github.com/kbeame">GitHub</a></li>
-        <li><a class="icon-linkedin circle" href="https://www.linkedin.com/in/kat-beame-b7743052">Linkedin</a></li>
-        <li><a class="icon-twitter circle" class="circle" href="https://twitter.com/KatBeame">Twitter</a></li>
+        <li class="tab clearfix" data-content="to-portfolio"><a id="portfolio" class="icon-folder-open circle" href="#">Portfolio</a></li>
+        <li class="tab clearfix" data-content="about"><a id="resume" class="icon-profile circle" href="#">About</a></li>
+        <li><a id="linked" class="icon-linkedin circle clearfix" href="https://www.linkedin.com/in/kat-beame-b7743052">Linkedin</a></li>
+        <li><a id="bird" class="icon-twitter circle clearfix" class="circle" href="https://twitter.com/KatBeame">Twitter</a></li>
       </ul>
     </nav>
     <main>
@@ -61,5 +64,8 @@
     <script type="text/javascript" src="js/portfolioArray.js"></script>
     <script type="text/javascript" src="js/print.js"></script>
     <script type="text/javascript" src="js/navbar.js"></script>
+    <script>
+      PortfolioCreation.retrieveAll();
+    </script>
   </body>
 </html>

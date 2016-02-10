@@ -1,6 +1,8 @@
+// It is important to keep functions as methods within objects to keep them organized.
+var portfolioView = {};
 
 //nav tab feature
-handleNav = function() {
+portfolioView.handleNav = function() {
   $('nav').on('click', '.tab', function() {
     var navVal = $(this).data('content');
     console.log(navVal);
@@ -12,11 +14,7 @@ handleNav = function() {
   // $('nav .tab:first').click();
 };
 
-handleNav();
-
-//allow readmore function to display more than 2 paragraphs
-
-readMorePortfolio = function() {
+portfolioView.readMorePortfolio = function() {
   $('.project-description *:nth-of-type(n+2)').hide();
 
   $('#to-portfolio').on('click', 'a.read-on', function(event) {
@@ -25,4 +23,16 @@ readMorePortfolio = function() {
     $(this).hide();
   });
 };
-readMorePortfolio();
+
+portfolioView.printToIndex = function() {
+  PortfolioCreation.all.forEach(function (element) {
+    $('.individualPrint').append(element.toHtml());
+  });
+};
+
+
+
+$(document).ready(function() {
+  portfolioView.handleNav();
+  portfolioView.readMorePortfolio();
+});

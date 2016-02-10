@@ -1,6 +1,3 @@
-//push up to this array
-var portfolio = [];
-
 //constructor function for the portfolio creation
 
 function PortfolioCreation (options) {
@@ -9,6 +6,8 @@ function PortfolioCreation (options) {
   this.description = options.description;
   this.datePublished = options.datePublished;
 }
+//made the array global (its better form to have fewer global items)
+PortfolioCreation.all = [];
 
 PortfolioCreation.prototype.toHtml = function () {
   var template = Handlebars.compile($('#a-template').text());
@@ -18,15 +17,38 @@ PortfolioCreation.prototype.toHtml = function () {
 
   return template(this);
 };
+PortfolioCreation.loadPortfolios = function(rawData) {
+  rawData.sort(function(a,b) {
+    return (new Date(b.datePublished)) - (new Date(a.datePublished));
+  });
 
-portfolioArray.sort(function(a,b) {
-  return (new Date(b.datePublished)) - (new Date(a.datePublished));
-});
-//use the portfolioArray to construct the portfolio items needed
-portfolioArray.forEach(function (element) {
-  portfolio.push(new PortfolioCreation(element));
-});
-//append the portfolio array to the article class name newPortfolioItem
-portfolio.forEach(function (element) {
-  $('.individualPrint').append(element.toHtml());
-});
+  rawData.forEach(function (element) {
+    PortfolioCreation.all.push(new PortfolioCreation(element));
+  });
+};
+
+PortfolioCreation.retrieveAll = function () {
+  if (localStorage.rawData) {
+    $.ajax ({
+      type: 'HEAD',
+      url: 'data/portfolioIpsum.json',
+      success: function (data, message, xhr) {
+        var eTag = xhr.getResponseHeader('eTag');
+        if ((!localStorage.eTag) || (eTag !== localStorage.eTag)) {
+          localStorage.eTag = eTag;
+        } else {
+          PortfolioCreation.loadPortfolios(JSON.parse(localStorage.rawData));
+        }
+      }
+    });
+    PortfolioCreation.loadPortfolios(JSON.parse(localStorage.rawData));
+    portfolioView.printToIndex();
+  } else {
+    $.getJSON('data/portfolioIpsum.json', function(data) {
+      var stringData = JSON.stringify(data);
+      localStorage.setItem('rawData', stringData);
+    });
+    PortfolioCreation.loadPortfolios(JSON.parse(localStorage.rawData));
+    portfolioView.printToIndex();
+  };
+};
