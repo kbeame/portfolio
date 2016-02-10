@@ -28,7 +28,7 @@
     });
   };
 
-  PortfolioCreation.retrieveAll = function () {
+  PortfolioCreation.retrieveAll = function (portfolioView) {
     if (localStorage.rawData) {
       $.ajax ({
         type: 'HEAD',
@@ -53,5 +53,15 @@
       portfolioView.printToIndex();
     };
   };
+
+  PortfolioCreation.numWordsAll = function () {
+    return PortfolioCreation.all.map(function(data) {
+      return data.description.match(/\b\w/g).length;
+    })
+    .reduce(function(prev, current) {
+      return prev + current;
+    });
+  };
+
   module.PortfolioCreation = PortfolioCreation;
 })(window);

@@ -30,12 +30,16 @@
     });
   };
 
-
+  portfolioView.printStats = function() {
+    $('#fun-facts .portfolio-count').text('Number of portfolio items: ' +PortfolioCreation.all.length);
+    $('#fun-facts .word-count').text('Total Wordcount: ' + PortfolioCreation.numWordsAll());
+  };
 
   $(document).ready(function() {
     portfolioView.handleNav();
     portfolioView.readMorePortfolio();
+    portfolioView.printStats();
   });
-  
+
   module.portfolioView = portfolioView;
 })(window);
