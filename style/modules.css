@@ -7,8 +7,19 @@
   position: absolute;
   color:black;
 }
+#about {
+  background-color: #223098;
+  border-radius: 20px;
+  display: block;
+  padding: 1%;
+  margin: 1%;
+}
 .facts {
-  background-color: white;
+  background-color: #223098;
+  border-radius: 20px;
+  display: block;
+  padding: 1%;
+  margin: 1%;
 }
 .personalInfo {
   margin: 2%;
