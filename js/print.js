@@ -1,5 +1,7 @@
 //constructor function for the portfolio creation(function(module) {
-function PortfolioCreation (options) {
+(function(module) {
+
+  function PortfolioCreation (options) {
     this.name = options.name;
     this.githubUrl = options.githubUrl;
     this.description = options.description;
@@ -26,7 +28,7 @@ function PortfolioCreation (options) {
     });
   };
 
-  PortfolioCreation.retrieveAll = function (portfolioView) {
+  PortfolioCreation.retrieveAll = function (view) {
     if (localStorage.rawData) {
       $.ajax ({
         type: 'HEAD',
@@ -41,14 +43,14 @@ function PortfolioCreation (options) {
         }
       });
       PortfolioCreation.loadPortfolios(JSON.parse(localStorage.rawData));
-      portfolioView.printToIndex();
+      view();
     } else {
       $.getJSON('data/portfolioIpsum.json', function(data) {
         var stringData = JSON.stringify(data);
         localStorage.setItem('rawData', stringData);
       });
       PortfolioCreation.loadPortfolios(JSON.parse(localStorage.rawData));
-      portfolioView.printToIndex();
+      view();
     };
   };
 
