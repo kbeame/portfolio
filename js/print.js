@@ -1,7 +1,5 @@
-//constructor function for the portfolio creation
-(function(module) {
-
-  function PortfolioCreation (options) {
+//constructor function for the portfolio creation(function(module) {
+function PortfolioCreation (options) {
     this.name = options.name;
     this.githubUrl = options.githubUrl;
     this.description = options.description;
@@ -64,4 +62,4 @@
   };
 
   module.PortfolioCreation = PortfolioCreation;
-})(window);
+}) (window);
