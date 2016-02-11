@@ -15,18 +15,18 @@
 
     <article class="clearfix" data-category="{{category}}">
       <header>
-        <h2>{{name}}<h2>
+        <h2>{{name}}</h2>
         <div>
             <span>{{publishedDatePrint}}</span>
           <address><a id="portfolio-link" href="{{githubUrl}}">Link to githubUrl</a></address>
         </div>
       </header>
       <section class=project-description>
-      {{{description}}}
-      <a href="#" class="read-on">read-on...<a>
-    </section>
+        {{{description}}}
+        <a href="#" class="read-on">read-on</a>
+      </section>
+    </article>
   </script>
-
     </head>
 
   <body>
@@ -57,6 +57,15 @@
        Conducted environmental monitoring and disposal of biohazardous materials (autoclave).
      </p>
     </section>
+    <section class="facts">
+      <article class="clearfix">
+        <h2>Fun Facts</h2>
+        <ul id="fun-facts">
+          <li class="word-count"></li>
+          <li class="portfolio-count"></li>
+        </ul>
+      </article>
+    </section>
     </main>
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
@@ -65,7 +74,7 @@
     <script type="text/javascript" src="js/print.js"></script>
     <script type="text/javascript" src="js/navbar.js"></script>
     <script>
-      PortfolioCreation.retrieveAll();
+      PortfolioCreation.retrieveAll(portfolioView);
     </script>
   </body>
 </html>
