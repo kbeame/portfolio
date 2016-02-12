@@ -16,7 +16,7 @@
   PortfolioCreation.all = [];
 
   PortfolioCreation.prototype.toHtml = function () {
-    var template = Handlebars.compile($('#a-template').text());
+    var template = Handlebars.compile($('#article-template').text());
 
     this.timeSince = parseInt((new Date() - new Date(this.datePublished))/60/60/24/1000);
     this.publishedDatePrint = this.datePublished ? 'published: ' + this.timeSince + ' days ago' : '(draft)';
