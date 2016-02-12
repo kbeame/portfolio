@@ -46,8 +46,7 @@
       viewPrt();
     } else {
       $.getJSON('data/portfolioIpsum.json', function(data) {
-        var stringData = JSON.stringify(data);
-        localStorage.setItem('rawData', stringData);
+        localStorage.rawData = JSON.stringify(data);
       });
       PortfolioCreation.loadPortfolios(JSON.parse(localStorage.rawData));
       viewPrt();
