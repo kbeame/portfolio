@@ -1,17 +1,17 @@
 //constructor function for the portfolio creation(function(module) {
 (function(module) {
 
-  function PortfolioCreation (options) {
-  //   Object.keys(options).forEach(function(e, index, keys)
-  //     this[e] = options[e]; //WHen I try to use this version it says that 'this' is a fatal error and thus it doesn't run.
-  //   },this);
-  // }
-
-    this.title = options.title;
-    this.githubUrl = options.githubUrl;
-    this.description = options.description;
-    this.datePublished = options.datePublished;
+  function PortfolioCreation(options){
+    Object.keys(options).forEach(function(e, index, keys) {
+      this[e] = options[e]; //WHen I try to use this version it says that 'this' is a fatal error and thus it doesn't run.
+    },this);
   }
+
+  //   this.title = options.title;
+  //   this.githubUrl = options.githubUrl;
+  //   this.description = options.description;
+  //   this.datePublished = options.datePublished;
+  // }
   //made the array global (its better form to have fewer global items)
   PortfolioCreation.all = [];
 
