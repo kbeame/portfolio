@@ -28,7 +28,7 @@
     });
   };
 
-  PortfolioCreation.retrieveAll = function (view) {
+  PortfolioCreation.retrieveAll = function (viewPrt) {
     if (localStorage.rawData) {
       $.ajax ({
         type: 'HEAD',
@@ -43,14 +43,14 @@
         }
       });
       PortfolioCreation.loadPortfolios(JSON.parse(localStorage.rawData));
-      view();
+      viewPrt();
     } else {
       $.getJSON('data/portfolioIpsum.json', function(data) {
         var stringData = JSON.stringify(data);
         localStorage.setItem('rawData', stringData);
       });
       PortfolioCreation.loadPortfolios(JSON.parse(localStorage.rawData));
-      view();
+      viewPrt();
     };
   };
 
