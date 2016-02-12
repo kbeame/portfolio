@@ -1,5 +1,6 @@
 body {
   font-family: 'Bitter', serif;
+  color: yellow;
 }
 h1 {
   font-size: 3.5rem;
@@ -20,6 +21,7 @@ span {
 nav {
   background-color: #FF9D0F;
   border-radius: 25px;
+  color: black;
 }
 
 nav ul {
@@ -29,6 +31,7 @@ nav ul {
 a {
 text-decoration: none;
 font-size: 1rem;
+color: white;
 }
 
 address {

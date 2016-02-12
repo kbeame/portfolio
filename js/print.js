@@ -1,8 +1,13 @@
-//constructor function for the portfolio creation
+//constructor function for the portfolio creation(function(module) {
 (function(module) {
 
   function PortfolioCreation (options) {
-    this.name = options.name;
+  //   Object.keys(options).forEach(function(e, index, keys)
+  //     this[e] = options[e]; //WHen I try to use this version it says that 'this' is a fatal error and thus it doesn't run.
+  //   },this);
+  // }
+
+    this.title = options.title;
     this.githubUrl = options.githubUrl;
     this.description = options.description;
     this.datePublished = options.datePublished;
@@ -11,7 +16,7 @@
   PortfolioCreation.all = [];
 
   PortfolioCreation.prototype.toHtml = function () {
-    var template = Handlebars.compile($('#a-template').text());
+    var template = Handlebars.compile($('#article-template').text());
 
     this.timeSince = parseInt((new Date() - new Date(this.datePublished))/60/60/24/1000);
     this.publishedDatePrint = this.datePublished ? 'published: ' + this.timeSince + ' days ago' : '(draft)';
@@ -28,7 +33,7 @@
     });
   };
 
-  PortfolioCreation.retrieveAll = function (portfolioView) {
+  PortfolioCreation.retrieveAll = function (viewPrt) {
     if (localStorage.rawData) {
       $.ajax ({
         type: 'HEAD',
@@ -43,14 +48,13 @@
         }
       });
       PortfolioCreation.loadPortfolios(JSON.parse(localStorage.rawData));
-      portfolioView.printToIndex();
+      viewPrt();
     } else {
       $.getJSON('data/portfolioIpsum.json', function(data) {
-        var stringData = JSON.stringify(data);
-        localStorage.setItem('rawData', stringData);
+        localStorage.rawData = JSON.stringify(data);
       });
       PortfolioCreation.loadPortfolios(JSON.parse(localStorage.rawData));
-      portfolioView.printToIndex();
+      viewPrt();
     };
   };
 
@@ -64,4 +68,4 @@
   };
 
   module.PortfolioCreation = PortfolioCreation;
-})(window);
+}) (window);

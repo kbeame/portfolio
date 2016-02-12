@@ -9,25 +9,23 @@
     <link rel="stylesheet" href="style/theme.css">
     <link rel="stylesheet" href="style/layout.css">
     <link rel="stylesheet" href="style/modules.css">
-
 <!-- Handle bar template -->
-<script id="a-template" type="text/x-handlebars-template">
-
-    <article class="clearfix" data-category="{{category}}">
-      <header>
-        <h2>{{name}}</h2>
-        <div>
+    <script id="article-template" type="text/x-handlebars-template">
+      <article class="clearfix" data-category="{{category}}">
+        <header>
+          <h2>{{title}}</h2>
+          <div>
             <span>{{publishedDatePrint}}</span>
-          <address><a id="portfolio-link" href="{{githubUrl}}">Link to githubUrl</a></address>
-        </div>
-      </header>
-      <section class=project-description>
-        {{{description}}}
-        <a href="#" class="read-on">read-on</a>
-      </section>
-    </article>
-  </script>
-    </head>
+            <address><a id="portfolio-link" href="{{githubUrl}}">Link to githubUrl</a></address>
+          </div>
+        </header>
+        <section class=project-description>
+          {{{description}}}
+          <a href="#" class="read-on">read-on</a>
+        </section>
+      </article>
+    </script>
+  </head>
 
   <body>
     <header class="mainHeader">
@@ -41,40 +39,46 @@
         <li class="tab clearfix" data-content="to-portfolio"><a id="portfolio" class="icon-folder-open circle" href="#">Portfolio</a></li>
         <li class="tab clearfix" data-content="about"><a id="resume" class="icon-profile circle" href="#">About</a></li>
         <li><a id="linked" class="icon-linkedin circle clearfix" href="https://www.linkedin.com/in/kat-beame-b7743052">Linkedin</a></li>
-        <li><a id="bird" class="icon-twitter circle clearfix" class="circle" href="https://twitter.com/KatBeame">Twitter</a></li>
+        <li><a id="bird" class="icon-twitter circle clearfix" href="https://twitter.com/KatBeame">Twitter</a></li>
+        <li><a id="git" class="icon-github circle clearfix" href="https://github.com/kbeame">GitHub</a></li>
       </ul>
     </nav>
     <main>
       <section id="to-portfolio" class="close-tab individualPrint"></section>
-    <section id="about" class="close-tab">
-      <h2>Kat's History</h2>
-      <div><a class="icon-mail2">katherine.beame@gmail.com</a></div>
-      <img id="katsFace" src="img/kat_face.jpg" alt="Headshot" />
-       <p>
-        Cultivated relationships with local vendors for participation in a nationwide study of food borne pathogens in food.
-       Culturally confirmed samples and prepared positive isolates for long-term storage.
-       Prepared media and reagents for use in aseptic sample processing.
-       Conducted environmental monitoring and disposal of biohazardous materials (autoclave).
-     </p>
-    </section>
-    <section class="facts">
-      <article class="clearfix">
-        <h2>Fun Facts</h2>
-        <ul id="fun-facts">
-          <li class="word-count"></li>
-          <li class="portfolio-count"></li>
+      <section id="about" class="close-tab">
+        <h2>Kat's History</h2>
+        <a class="icon-mail2">katherine.beame@gmail.com</a>
+        <img id="katsFace" src="img/kat_face.jpg" alt="Headshot" />
+        <h3>I am an aspiring Full Stack Developer from Seattle. I loves tea, radio stories and the West Wing.</h3>
+        <p>
+        Before entering into the Code Fellows program I took a 4 year break from the rain of the Pacific Northwest to get a degree in Environmental Studies from Connecticut College. I returned home to Seattle and have spent the past couple years working as a microbiologist before I decided to got to school again and pursue my new found dream of becoming a kick-ass Web Developer.
+        </p>
+        <h2>Contact Information</h2>
+        <ul>
+          <li><a class="icon-mail2">katherine.beame@gmail.com</a></li>
+          <li><a class="icon-linkedin" href="https://www.linkedin.com/in/kat-beame-b7743052">Linkedin</a></li>
+          <li><a class="icon-twitter" href="https://twitter.com/KatBeame">Twitter</a></li>
+          <li><a class="icon-github" href="https://github.com/kbeame">GitHub</a></li>
         </ul>
-      </article>
-    </section>
+      </section>
+      <section class="facts">
+        <article class="clearfix">
+          <h2>Fun Facts</h2>
+          <ul id="fun-facts">
+            <li class="word-count"></li>
+            <li class="portfolio-count"></li>
+          </ul>
+        </article>
+      </section>
     </main>
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.5/handlebars.min.js"></script>
     <script type="text/javascript" src="js/portfolioArray.js"></script>
     <script type="text/javascript" src="js/print.js"></script>
-    <script type="text/javascript" src="js/navbar.js"></script>
+    <script type="text/javascript" src="js/view.js"></script>
     <script>
-      PortfolioCreation.retrieveAll(portfolioView);
+      PortfolioCreation.retrieveAll(portfolioView.printToIndex);
     </script>
   </body>
 </html>
