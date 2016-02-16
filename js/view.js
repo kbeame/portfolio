@@ -28,9 +28,11 @@
   };
 
   portfolioView.printToIndex = function() {
+    console.log('print to index');
     PortfolioCreation.all.forEach(function (element) {
       $('.individualPrint').append(element.toHtml());
     });
+
   };
 
   portfolioView.printStats = function() {

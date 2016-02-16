@@ -2,10 +2,11 @@
   var portfolioController = {};
 
   portfolioController.index = function() {
+    console.log('reached portfolioController.index');
     PortfolioCreation.retrieveAll(portfolioView.printToIndex);
-    
+
     $('main > section').hide();
-    $('#articles').show();
+    $('#to-portfolio').show();
   };
 
   module.portfolioController = portfolioController;
