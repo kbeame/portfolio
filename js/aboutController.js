@@ -3,7 +3,7 @@
 
   aboutController.index = function() {
     $('main > section').hide();
-    $('.about').show();
+    $('#about').show();
   };
   module.aboutController = aboutController;
 })(window);
