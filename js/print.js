@@ -7,12 +7,6 @@
     },this);
   }
 
-  //   this.title = options.title;
-  //   this.githubUrl = options.githubUrl;
-  //   this.description = options.description;
-  //   this.datePublished = options.datePublished;
-  // }
-  //made the array global (its better form to have fewer global items)
   PortfolioCreation.all = [];
 
   PortfolioCreation.prototype.toHtml = function () {
