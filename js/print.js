@@ -3,7 +3,7 @@
 
   function PortfolioCreation(options){
     Object.keys(options).forEach(function(e, index, keys) {
-      this[e] = options[e]; //WHen I try to use this version it says that 'this' is a fatal error and thus it doesn't run.
+      this[e] = options[e];
     },this);
   }
 

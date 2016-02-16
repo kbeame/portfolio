@@ -1,22 +1,6 @@
 (function(module) {
   // It is important to keep functions as methods within objects to keep them organized.
   var portfolioView = {};
-  //nav tab feature
-  // portfolioView.handleNav = function() {
-  //   $('nav').on('click', '.tab', function() {
-  //     var navVal = $(this).data('content');
-  //     console.log(navVal);
-  //     $('.close-tab').hide();
-  //     $('section#' + navVal).fadeIn();
-  //     $('.facts').fadeIn();
-  //   });
-  //   $('.close-tab').hide();
-  //   $('.facts').hide();
-  //
-  //   //I don't want the 'portfolio' info to show up first. I only want it if I click on portfolio.
-  //   // $('nav .tab:first').click();
-  // };
-
   portfolioView.readMorePortfolio = function() {
     $('.project-description *:nth-of-type(n+2)').hide();
 
@@ -41,7 +25,6 @@
   };
 
   $(document).ready(function() {
-    // portfolioView.handleNav();
     portfolioView.readMorePortfolio();
     portfolioView.printStats();
   });
