@@ -20,5 +20,8 @@
   "bugs": {
     "url": "https://github.com/kbeame/portfolio/issues"
   },
-  "homepage": "https://github.com/kbeame/portfolio#readme"
+  "homepage": "https://github.com/kbeame/portfolio#readme",
+  "dependencies": {
+    "express": "^4.13.4"
+  }
 }
