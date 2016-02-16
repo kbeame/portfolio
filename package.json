@@ -22,6 +22,7 @@
   },
   "homepage": "https://github.com/kbeame/portfolio#readme",
   "dependencies": {
-    "express": "^4.13.4"
+    "express": "^4.13.4",
+    "express-request-proxy": "^1.0.10"
   }
 }

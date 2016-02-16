@@ -3,6 +3,7 @@
 
   portfolioController.index = function() {
     PortfolioCreation.retrieveAll(portfolioView.printToIndex);
+    
     $('main > section').hide();
     $('#articles').show();
   };
