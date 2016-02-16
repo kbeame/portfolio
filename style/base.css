@@ -42,3 +42,32 @@ li {
   list-style-type: none;
   background-color: inherit;
 }
+
+
+a {
+  background-color: inherit;
+}
+h1 {
+  background-color: inherit;
+}
+section {
+  background-color: inherit;
+}
+h2 {
+  background-color: inherit;
+}
+header {
+  background-color: inherit;
+}
+article {
+  background-color: inherit;
+}
+p {
+  background-color: inherit;
+}
+div {
+  background-color: inherit;
+}
+time {
+  background-color: inherit;
+}
