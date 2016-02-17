@@ -5,10 +5,11 @@
 //explain what this function does
   repos.requestRepos = function(callback) {
     $.ajax({
-      url: 'https://api.github.com/users/kbeame/repos' + '?per_page=5&sort=updated',
+      url: 'https://api.github.com/users/kbeame/repos?sort=updated&per_page=5',
       type: 'GET',
-      headers: { 'Authorization': 'token' + githubToken },
+      headers: { 'Authorization': 'token ' + githubToken},
       success: function(data, message, xhr) {
+        console.log(data);
         repos.all = data;
       }
     }).done(function() {
@@ -17,6 +18,7 @@
   };
 //explain what this function does
   repos.with = function(attr) {
+    console.log('gone through wtih function');
     return repos.all.filter(function(repo){
       return repo[attr];
     });
