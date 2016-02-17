@@ -8,7 +8,7 @@
   }
 
   PortfolioCreation.all = [];
-
+//this should be in the portfolioView perview because it
   PortfolioCreation.prototype.toHtml = function () {
     var template = Handlebars.compile($('#article-template').text());
 
@@ -26,7 +26,7 @@
       PortfolioCreation.all.push(new PortfolioCreation(element));
     });
   };
-
+//now that I have the ajax call do I need this?
   PortfolioCreation.retrieveAll = function (viewPrt) {
     if (localStorage.rawData) {
       $.ajax ({
