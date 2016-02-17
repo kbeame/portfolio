@@ -8,7 +8,7 @@
   }
 
   PortfolioCreation.all = [];
-//this should be in the portfolioView perview because it
+//this should be in the portfolioView perview because it displays the function
   PortfolioCreation.prototype.toHtml = function () {
     var template = Handlebars.compile($('#article-template').text());
 

@@ -6,7 +6,7 @@
     // PortfolioCreation.retrieveAll(portfolioView.printToIndex);
     $('main > section').hide();
     $('#to-portfolio').show();
-    repos.requestRepos(portfolioView.printToIndex);
+    repos.requestRepos(reposView.index);
   };
   PortfolioCreation.all = [];
   module.portfolioController = portfolioController;

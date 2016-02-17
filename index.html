@@ -10,7 +10,7 @@
     <link rel="stylesheet" href="style/layout.css">
     <link rel="stylesheet" href="style/modules.css">
 <!-- Handle bar template -->
-    <script id="article-template" type="text/x-handlebars-template">
+    <!-- <script id="article-template" type="text/x-handlebars-template">
       <article class="clearfix" data-category="{{category}}">
         <header>
           <h2>{{title}}</h2>
@@ -24,7 +24,24 @@
           <a href="#" class="read-on">read-on</a>
         </section>
       </article>
-    </script>
+    </script> -->
+<!-- Handle bars for github api -->
+<script id="repo-template" type="text/x-handlebars-template">
+<li>
+    <header>
+      <h2>{{name}}</h2>
+      <div>
+        <span>{{created_at}}</span>
+        <address><a id="portfolio-link" href="{{html_url}}">Link to githubUrl</a></address>
+      </div>
+    </header>
+    <section class=project-description>
+      <p>{{description}}</p>
+      <a href="#" class="read-on">read-on</a>
+    </section>
+</li>
+</script>
+
   </head>
 
   <body>
@@ -44,10 +61,9 @@
       </ul>
     </nav>
     <main>
-      <section id="to-portfolio" class="close-tab individualPrint">
-        <h1>Kat's Projects on GitHub:</h1>
+      <section id="to_portfolio" class="close-tab individualPrint">
         <ul>
-          <li>Coding</li>
+
         </ul>
       </section>
       <section id="about" class="close-tab about">

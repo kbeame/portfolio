@@ -5,8 +5,9 @@
 //explain what this function does
   repos.requestRepos = function(callback) {
     $.ajax({
-      url: 'https://api.github.com/users/kbeame/repos?sort=updated&per_page=5',
+      url: 'https://api.github.com/users/kbeame/repos?sort=updated',
       type: 'GET',
+      dataType: 'json',
       headers: { 'Authorization': 'token ' + githubToken},
       success: function(data, message, xhr) {
         console.log(data);
