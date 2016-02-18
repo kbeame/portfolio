@@ -4,18 +4,10 @@
   repos.all =[];
 //explain what this function does
   repos.requestRepos = function(callback) {
-    $.ajax({
-      url: 'https://api.github.com/users/kbeame/repos?sort=updated',
-      type: 'GET',
-      dataType: 'json',
-      headers: { 'Authorization': 'token ' + githubToken},
-      success: function(data, message, xhr) {
-        console.log(data);
+    $.get('https://api.github.com/users/kbeame/repos?sort=updated')
+      .done(function(data, message, xhr) {
         repos.all = data;
-      }
-    }).done(function() {
-      callback();
-    });
+      }).done(callback);
   };
 //explain what this function does
   repos.with = function(attr) {
