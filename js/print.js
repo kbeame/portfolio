@@ -3,12 +3,12 @@
 
   function PortfolioCreation(options){
     Object.keys(options).forEach(function(e, index, keys) {
-      this[e] = options[e]; //WHen I try to use this version it says that 'this' is a fatal error and thus it doesn't run.
+      this[e] = options[e];
     },this);
   }
 
   PortfolioCreation.all = [];
-
+//this should be in the portfolioView perview because it displays the function
   PortfolioCreation.prototype.toHtml = function () {
     var template = Handlebars.compile($('#article-template').text());
 
@@ -26,7 +26,7 @@
       PortfolioCreation.all.push(new PortfolioCreation(element));
     });
   };
-
+//now that I have the ajax call do I need this?
   PortfolioCreation.retrieveAll = function (viewPrt) {
     if (localStorage.rawData) {
       $.ajax ({
@@ -51,15 +51,15 @@
       viewPrt();
     };
   };
-
-  PortfolioCreation.numWordsAll = function () {
-    return PortfolioCreation.all.map(function(data) {
-      return data.description.match(/\b\w/g).length;
-    })
-    .reduce(function(prev, current) {
-      return prev + current;
-    });
-  };
+//figure out a way to keep this with tht githubUrl
+  // PortfolioCreation.numWordsAll = function () {
+  //   return PortfolioCreation.all.map(function(data) {
+  //     return data.description.match(/\b\w/g).length;
+  //   })
+  //   .reduce(function(prev, current) {
+  //     return prev + current;
+  //   });
+  // };
 
   module.PortfolioCreation = PortfolioCreation;
 }) (window);

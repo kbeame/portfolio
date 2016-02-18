@@ -10,7 +10,7 @@
     <link rel="stylesheet" href="style/layout.css">
     <link rel="stylesheet" href="style/modules.css">
 <!-- Handle bar template -->
-    <script id="article-template" type="text/x-handlebars-template">
+    <!-- <script id="article-template" type="text/x-handlebars-template">
       <article class="clearfix" data-category="{{category}}">
         <header>
           <h2>{{title}}</h2>
@@ -24,7 +24,24 @@
           <a href="#" class="read-on">read-on</a>
         </section>
       </article>
-    </script>
+    </script> -->
+<!-- Handle bars for github api -->
+<script id="repo-template" type="text/x-handlebars-template">
+<li>
+    <header>
+      <h2>{{name}}</h2>
+      <div>
+        <span>{{created_at}}</span>
+        <address><a id="portfolio-link" href="{{html_url}}">Link to githubUrl</a></address>
+      </div>
+    </header>
+    <section class=project-description>
+      <p>{{description}}</p>
+      <a href="#" class="read-on">read-on</a>
+    </section>
+</li>
+</script>
+
   </head>
 
   <body>
@@ -44,7 +61,11 @@
       </ul>
     </nav>
     <main>
-      <section id="to-portfolio" class="close-tab individualPrint"></section>
+      <section id="to_portfolio" class="close-tab individualPrint">
+        <ul>
+
+        </ul>
+      </section>
       <section id="about" class="close-tab about">
         <h2>Kat's History</h2>
         <a class="icon-mail2">katherine.beame@gmail.com</a>
@@ -61,7 +82,7 @@
           <li><a class="icon-github" href="https://github.com/kbeame">GitHub</a></li>
         </ul>
       </section>
-      <section class="facts about">
+      <!-- <section class="facts about">
         <article class="clearfix">
           <h2>Fun Facts</h2>
           <ul id="fun-facts">
@@ -69,25 +90,22 @@
             <li class="portfolio-count"></li>
           </ul>
         </article>
-      </section>
+      </section> -->
     </main>
-
+    <script src="/js/githubToken.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.5/handlebars.min.js"></script>
-    <!-- //added both this and the CDN because I wasn't sure why my page wasnt showing in localhost:3000 -->
     <script src="/vendor/page.js"></script>
-    <!-- <script src="https://cdn.rawgit.com/visionmedia/page.js/master/page.js"></script> -->
 
-
-    <!-- <script type="text/javascript" src="js/portfolioArray.js"></script> -->
     <script src="/js/print.js"></script>
-    <script src="/js/view.js"></script>
+    <script src="/js/portfolioView.js"></script>
     <script src="/js/portfolioController.js"></script>
     <script src="/js/aboutController.js"></script>
 
+    <script src="/js/repos.js"></script>
+    <script src="/js/reposView.js"></script>
+
     <script src="/js/route.js"></script>
-    <!-- <script>
-      PortfolioCreation.retrieveAll(portfolioView.printToIndex);
-    </script> -->
+
   </body>
 </html>
