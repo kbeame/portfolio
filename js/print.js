@@ -51,15 +51,6 @@
       viewPrt();
     };
   };
-//figure out a way to keep this with tht githubUrl
-  // PortfolioCreation.numWordsAll = function () {
-  //   return PortfolioCreation.all.map(function(data) {
-  //     return data.description.match(/\b\w/g).length;
-  //   })
-  //   .reduce(function(prev, current) {
-  //     return prev + current;
-  //   });
-  // };
 
   module.PortfolioCreation = PortfolioCreation;
 }) (window);
