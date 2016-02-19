@@ -3,7 +3,7 @@
 
   homeController.index = function() {
     console.log('reached homeController.index');
-    $('main').hide();
+    $('main > section').hide();
 
   };
   module.homeController = homeController;
