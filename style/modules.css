@@ -49,6 +49,9 @@ address {
 /*.template {
   display: none;
 }*/
+#home {
+  display: none;
+}
 nav {
   display: relative;
 }
